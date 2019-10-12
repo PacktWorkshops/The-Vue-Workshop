@@ -6,7 +6,7 @@
         <div v-if="favPets.length > 0">
           <p>My favourite pets are: <br>
           <ul>
-            <li v-for="pet in favPets" :key="pet" v-text="pet" class="inline" />
+            <li v-for="(pet, index) in favPets" :key="pet + '__' + index" v-text="pet" class="inline" />
           </ul>
           </p>
         </div>
