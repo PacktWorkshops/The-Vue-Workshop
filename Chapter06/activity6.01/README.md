@@ -1,4 +1,4 @@
-# example6.01
+# activity6.01
 
 ## Project setup
 ```

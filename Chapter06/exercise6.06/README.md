@@ -1,4 +1,4 @@
-# example6.01
+# exercise6.06
 
 ## Project setup
 ```
