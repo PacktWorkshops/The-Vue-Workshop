@@ -1,0 +1,10 @@
+{
+    "name": "Chapter06",
+    "private": true,
+    "workspaces": [
+      "example6.01"
+    ],
+    "dependencies": {},
+    "scripts": {}
+  }
+  
