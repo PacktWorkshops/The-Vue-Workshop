@@ -1,22 +1,47 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
+
+const messages = []
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: Home
+    name: 'messages',
+    component: () => import(/* webpackChunkName: "messages" */ '../views/Messages.vue'),
+    props: {
+      list: messages
+    },
+    children: [{
+      path: 'list',
+      name: 'list',
+      component: () => import(/* webpackChunkName: "list" */ '../views/MessageList.vue'),
+      props: true,
+    }, {
+      path: 'editor',
+      name: 'editor',
+      component: () => import(/* webpackChunkName: "list" */ '../views/MessageEditor.vue'),
+      props: true,
+    }]
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/message/:id',
+    name: 'message',
+    component: () => import(/* webpackChunkName: "message" */ '../views/Message.vue'),
+    props:true,
+    beforeEnter(to, from, next) {
+      if (to.params && to.params.id) {
+        const id = to.params.id;
+        
+        if (messages && messages.length > 0 && id < messages.length) {
+          to.params.content = messages[id];
+        }
+      }
+
+      to.params.from = from;
+      next()
+    },
   }
 ]
 
