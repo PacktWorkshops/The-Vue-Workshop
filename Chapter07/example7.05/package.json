@@ -1,5 +1,5 @@
 {
-  "name": "example7.04",
+  "name": "example7.05",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "core-js": "^3.3.2",
-    "gsap": "^3.0.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
