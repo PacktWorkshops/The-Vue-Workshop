@@ -1,5 +1,5 @@
 {
-  "name": "activity7.01",
+  "name": "example7.07",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,8 @@
   },
   "dependencies": {
     "core-js": "^3.4.3",
-    "vue": "^2.6.10",
-    "vue-router": "^3.1.3"
+    "gsap": "^3.0.1",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",

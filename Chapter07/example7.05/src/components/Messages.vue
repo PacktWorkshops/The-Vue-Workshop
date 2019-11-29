@@ -1,5 +1,14 @@
 <template>
   <div>
+    <h2>This is messages animation on page initial render</h2>
+    <transition-group
+      appear="true"
+      appear-class="fade-enter"
+      appear-active-class="fade-enter-active"
+      tag="div"
+    >
+      <p v-for="message in messages" :key="message">{{message}}</p>
+    </transition-group>
     <button v-on:click="show = !show">
       {{ show ? "Hide list": "Show list"}}
     </button>

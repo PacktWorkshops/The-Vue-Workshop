@@ -1,8 +1,6 @@
 <template>
   <div class="hello">
-    <transition name="fade-in">
-      <h1>{{ msg }}</h1>
-    </transition>
+    <h1>{{ msg }}</h1>
   </div>
 </template>
 
@@ -14,15 +12,7 @@ export default {
   }
 }
 </script>
-<style>
-.fade-in-enter, .fade-in-leave-to {
-  opacity: 0;
-}
 
-.fade-in-enter-active, .fade-in-leave-active {
-  transition: opacity .5s ease-in;
-}
-</style>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {

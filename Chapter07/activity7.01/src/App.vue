@@ -1,21 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <component :is="layout">
+      <transition name="fade" mode="out-in">
+        <router-view :layout.sync="layout"/>
+      </transition>
+    </component>
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      layout: () => import(/* webpackChunkName: "defaultLayout" */ './layouts/default.vue')
+    }
   }
 }
 </script>
-
+<style>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 2s, transform 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+  transform: translateX(-20%);
+}
+</style>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -23,6 +32,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
