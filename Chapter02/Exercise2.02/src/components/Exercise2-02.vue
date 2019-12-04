@@ -1,17 +1,8 @@
 <template>
   <div class="container">
-    <input v-model="firstWord" placeholder="Enter an interesting word" />
-    <input v-model="lastWord" placeholder="Enter an interesting word" />
-    <input v-model="wordPair" placeholder="Enter an interesting word" />
-
-
-    
-    <button @click="triggerSetter">Trigger the setter</button>
-
-    <h3 v-if="showPair" class="output">{{ wordPair }}</h3>
-    {{ reverseWords }}
-
-    {{ firstWord }} {{ lastWord}}
+    <input type="number" v-model="incrementOne">
+    <h3>Get input: {{ incrementOne }}</h3>
+    <h5>Set division: {{ divideByTwo }}</h5>
   </div>
 </template>
 
@@ -19,31 +10,20 @@
 export default {
   data() {
     return {
-      firstWord: '',
-      lastWord: '',
-      reverseWords: '',
+      count: -1,
+      divideByTwo: 0
     }
   },
-  methods: {
-    triggerSetter() {
-      this.firstWord = 'balls'
-    },
-  },
   computed: {
-    showPair() {
-      return !!this.firstWord && !!this.lastWord
-    },
-    wordPair: {
+    incrementOne: {
       // getter
       get() {
-        return this.firstWord + ' & ' + this.lastWord
+        return this.count + 1
       },
       // setter
-      set(newValue) {
-        var names = newValue.split(' & ')
-        this.firstWord = names[0]
-        this.lastWord = names[names.length - 1]
-        this.reverseWords = this.firstWord.length + this.lastWord.length
+      set(val) {
+        this.count = val - 1
+        this.divideByTwo = val / 2
       },
     },
   },
@@ -59,8 +39,5 @@ export default {
 input {
   padding: 10px 6px;
   margin: 20px 10px 10px 0;
-}
-.output {
-  font-size: 16px;
 }
 </style>
