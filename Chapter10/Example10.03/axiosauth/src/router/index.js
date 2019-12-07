@@ -15,9 +15,6 @@ const routes = [
   {
     path: '/cats',
     name: 'cats',
-    // route level code-splitting
-    // this generates a separate chunk (cats.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "cats" */ '../views/Cats.vue'),
     beforeEnter: (to, from, next) => {
       if(!store.state.token) {
