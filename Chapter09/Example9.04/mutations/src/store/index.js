@@ -5,22 +5,18 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    age:39, 
+    totalCats:5, 
     name: "Lindy"
   },
   mutations: {
-    birthday(state) {
-      state.age++;
+    adoptCat(state) {
+      state.totalCats++;
     },
-    fountainOfYouth(state) {
-      if(state.age > 0) state.age--;
+    placeCat(state) {
+      if(state.totalCats > 0) state.totalCats--;
     },
     setName(state, name) {
       state.name = name;
     }
-  },
-  actions: {
-  },
-  modules: {
   }
 })

@@ -24,11 +24,5 @@ export default new Vuex.Store({
         return state.books.filter(b => b.pages <= pages);
       }
     }
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
   }
 })

@@ -1,31 +1,20 @@
 <template>
   <div id="app">
     <p>
-    My name is {{ $store.state.name }} and I'm {{ $store.state.age }} years old. 
+    My name is {{ $store.state.name }} and 
+    my favorite color is {{ $store.state.favoriteColor }}. 
     My job is a {{ $store.state.profession }}.
     </p>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HelloWorld from '@/components/HelloWorld';
 export default {
   name: 'app',
-  components: {
+  components:{
     HelloWorld
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

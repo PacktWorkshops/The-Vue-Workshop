@@ -12,11 +12,5 @@ export default new Vuex.Store({
     name(state) {
       return state.firstName + ' ' + state.lastName;
     }
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
   }
 })

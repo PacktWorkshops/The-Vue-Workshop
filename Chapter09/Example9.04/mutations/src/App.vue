@@ -2,22 +2,23 @@
   <div id="app">
     <h1>About Me</h1>
     <p>
-      My name is {{ $store.state.name }} and I am {{ $store.state.age }} years old.
+      My name is {{ $store.state.name }} and 
+      I have {{ $store.state.totalCats }} cats.
     </p>
     <p>
       <input v-model="newName"> <button @click="setName" :disabled="!newName">Update Name</button>
     </p>
-    <Age/>
+    <Cat/>
   </div>
 </template>
 
 <script>
-import Age from './components/Age.vue'
+import Cat from './components/Cat.vue'
 
 export default {
   name: 'app',
   components: {
-    Age
+    Cat
   },
   data() {
     return {
