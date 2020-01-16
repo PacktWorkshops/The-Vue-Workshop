@@ -1,6 +1,7 @@
-# Example5.07
+# Example5.09
 
-Vue.js dynamic component tag
+Vue.js Functional Components.
+
 ## Project setup
 ```
 npm install

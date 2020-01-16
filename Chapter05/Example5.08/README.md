@@ -1,6 +1,6 @@
-# Example5.07
+# Example5.08
 
-Vue.js dynamic component tag
+Vue.js dynamic component with keep-alive
 ## Project setup
 ```
 npm install

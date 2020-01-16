@@ -1,6 +1,6 @@
 {
-  "name": "Example5.07",
-  "description": "Vue.js dynamic component tag",
+  "name": "Example5.09",
+  "description": "Vue.js Functional Components",
   "version": "0.1.0",
   "private": true,
   "scripts": {
