@@ -1,6 +1,7 @@
-# Example5.07
+# Exercise5.03
 
-Vue.js dynamic component tag
+Vue.js toggleable card layout exercise
+
 ## Project setup
 ```
 npm install

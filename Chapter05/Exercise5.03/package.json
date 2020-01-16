@@ -1,6 +1,6 @@
 {
-  "name": "Example5.07",
-  "description": "Vue.js dynamic component tag",
+  "name": "Exercise5.03",
+  "description": "Vue.js toggleable card layout exercise",
   "version": "0.1.0",
   "private": true,
   "scripts": {
