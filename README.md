@@ -11,9 +11,7 @@ This is the repository for [The Vue Workshop](https://courses.packtpub.com/cours
 <a href="https://courses.packtpub.com/courses/go?utm_source=github&utm_medium=repository&utm_campaign=1838647945&utm_term=GO&utm_content=The%20Go%20Workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/The%20Go%20Workshop.jpg" alt="The Go Workshop" height="340px" width="280px" align="right" this.target="_blank"></a>
 
 To get started with the project files, you'll need to:
-1. Install the [Go Compiler](https://golang.org/doc/install)
-2. Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-3. Install [Visual Studio Code (Editor/IDE)](https://code.visualstudio.com/)
+
 
 ## About The Vue Workshop
 
