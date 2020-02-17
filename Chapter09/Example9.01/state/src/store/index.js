@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     name:"Lindy", 
     favoriteColor: "blue", 
-    profession: "mage"
+    profession: "librarian"
   },
   mutations: {
   },
