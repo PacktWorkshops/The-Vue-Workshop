@@ -14,7 +14,7 @@ export default {
         'Hello, how are you?',
         'The weather is nice',
         'This is message feed',
-        'And I am the forth message'
+        'And I am the fourth message'
       ]
     }
   }

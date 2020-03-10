@@ -14,7 +14,7 @@ const messages = [
     sent: '10 Jan 2020'
   },
   {
-    content: 'And I am the forth message',
+    content: 'And I am the fourth message',
     author: 'Chuck',
     sent: '1 Apr 2021'
   },
