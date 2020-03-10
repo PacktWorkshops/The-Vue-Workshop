@@ -62,7 +62,6 @@ export default {
     api.get('starships')
     .then(res => this.ships = res.data);
 
-
   }
 }
 </script>

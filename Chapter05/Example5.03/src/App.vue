@@ -1,5 +1,5 @@
 <template>
   <div>
-    <CustomButton>Hello World</CustomButton>
+    <CustomButton>Click Me</CustomButton>
   </div>
 </template>
