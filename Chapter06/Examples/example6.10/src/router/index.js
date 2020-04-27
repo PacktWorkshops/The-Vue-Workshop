@@ -29,7 +29,7 @@ const router = new VueRouter({
 
 let user = 'Adam';
 
-router.beforeEach((to, from, next) => {
+export const beforeEach = ((to, from, next) => {
   if (to.name === 'about' && (!to.params || !to.params.user)) {
     next({ name: 'about', params: { user }})
   }
@@ -37,16 +37,15 @@ router.beforeEach((to, from, next) => {
     user = to.params.user;
     next()
   }
-
-  console.log('beforeEach: user - ', user)
 });
 
-router.afterEach((to, from) => {
+export const afterEach = ((to, from) => {
   if (to.name === 'about' && to.params && to.params.user) {
     user = to.params.user;
   }
-
-  console.log('afterEach: user - ', user)
 })
+
+router.beforeEach = beforeEach
+router.afterEach = afterEach
 
 export default router

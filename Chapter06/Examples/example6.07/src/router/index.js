@@ -31,7 +31,8 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
-router.beforeEach((
+
+export const beforeEach = ((
   to, // The destination route 
   from, //The source route 
   next //The function to trigger to resolve the hook
@@ -43,4 +44,6 @@ router.beforeEach((
     next(); 
   }
 })
+
+router.beforeEach = beforeEach
 export default router

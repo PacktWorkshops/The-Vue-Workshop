@@ -32,7 +32,7 @@ const router = new VueRouter({
   routes
 })
 
-router.beforeResolve((
+export const beforeResolve = ((
   to, // The destination route 
   from, //The source route 
   next //The function to trigger to resolve the hook
@@ -44,5 +44,7 @@ router.beforeResolve((
     next(); 
   }
 })
+
+router.beforeResolve = beforeResolve
 
 export default router

@@ -19,7 +19,7 @@ export const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
     props: true,
     beforeEnter: (to, from, next) => {
-      if (!to.params || !to.params.user) {
+      if (to.params && !to.params.user) {
         to.params.user = 'Adam'
       }
       next()
