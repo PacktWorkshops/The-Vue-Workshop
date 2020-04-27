@@ -17,13 +17,12 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
-    props: true,
-    beforeEnter: (to, from, next) => {
-      if (!to.params || !to.params.user) {
-        to.params.user = 'Adam'
-      }
-      next()
-    }
+    props: true
+  },
+  {
+    path: '/error',
+    name: 'error',
+    component: () => import(/* webpackChunkName: "error" */ '../views/Error.vue'),
   }
 ]
 
@@ -32,7 +31,16 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
-
-let user = 'Adam';
-
+router.beforeEach((
+  to, // The destination route 
+  from, //The source route 
+  next //The function to trigger to resolve the hook
+) => {
+  if (to.name === 'about' && (!to.params || !to.params.user)) {
+    next({ name: 'error' })
+  }
+  else {
+    next(); 
+  }
+})
 export default router

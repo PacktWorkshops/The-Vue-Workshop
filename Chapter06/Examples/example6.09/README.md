@@ -1,4 +1,4 @@
-# example6.09
+# example6.06
 
 ## Project setup
 ```

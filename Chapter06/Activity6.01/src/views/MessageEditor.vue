@@ -32,7 +32,7 @@ export default {
   },
   beforeRouteLeave(to, from, next) {
       if (this.$refs.textArea.value !== '') {
-        const ans = window.confirm('You have unsaved message. Are you sure to navigate away?');
+        const ans = window.confirm('You have an unsaved message.  Are you sure you want to navigate away?');
 
         next(!!ans);
       }
