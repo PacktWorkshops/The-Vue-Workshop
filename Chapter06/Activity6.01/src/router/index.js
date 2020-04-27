@@ -5,7 +5,7 @@ Vue.use(VueRouter)
 
 const messages = []
 
-const routes = [
+export const routes = [
   {
     path: '/',
     name: 'messages',
