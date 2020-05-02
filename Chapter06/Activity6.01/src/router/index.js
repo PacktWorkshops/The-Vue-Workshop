@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Messages from '@/views/Messages.vue'
 
 Vue.use(VueRouter)
 
 const messages = []
 
-const routes = [
+export const routes = [
   {
     path: '/',
     name: 'messages',

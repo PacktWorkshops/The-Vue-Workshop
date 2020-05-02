@@ -1,19 +1,13 @@
 <template>
   <div id="app">
-    <component :is="layout">
-      <router-view :currentLayout.sync="layout"/>
-    </component>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
+    </div>
+    <router-view/>
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      layout: () => import(/* webpackChunkName: "defaultlayout" */ './layouts/default.vue') 
-    }
-  }
-}
-</script>
+
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
