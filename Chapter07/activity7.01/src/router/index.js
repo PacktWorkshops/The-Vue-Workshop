@@ -5,7 +5,7 @@ Vue.use(VueRouter)
 
 const messages = ["hello how are you", "test me"]
 
-const routes = [
+export const routes = [
   {
     path: '/',
     name: 'messages',

@@ -2,7 +2,7 @@
   <div>
     <h2>This is messages animation on page initial render</h2>
     <transition-group
-      appear="true"
+      :appear="true"
       appear-class="fade-enter"
       appear-active-class="fade-enter-active"
       tag="div"
@@ -16,7 +16,7 @@
       name="fade"
       tag="div"
     >
-      <p v-for="message in messages" :key="message" v-show="show">{{message}}</p>
+      <p v-for="message in messages" :key="message" v-show="show" class="msg-in-animate">{{message}}</p>
     </transition-group>
   </div>
 </template>
