@@ -13,7 +13,7 @@ export default {
   beforeRouteEnter(to, from, next) {
     if (!to.params || !to.params.user) {
       next(comp => {
-        comp.user = 'Alexs'
+        comp.user = 'Alex'
       })
     }
     else {
