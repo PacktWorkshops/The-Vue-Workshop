@@ -19,7 +19,7 @@ export default new Vuex.Store({
   },
   actions: {
     loadFilms(context) {
-      axios.get('https://swapi.co/api/films')
+      axios.get('https://swapi.dev/api/films')
       .then(res => {
         context.commit('setFilms', res.data.results);
       })
@@ -28,7 +28,7 @@ export default new Vuex.Store({
       });  
     },
     loadShips(context) {
-      axios.get('https://swapi.co/api/starships')
+      axios.get('https://swapi.dev/api/starships')
       .then(res => {
         context.commit('setShips', res.data.results);
       })
