@@ -30,8 +30,7 @@ export default {
   },
   created() {
 
-    /*
-    axios.get('https://swapi.co/api/films')
+    axios.get('https://swapi.dev/api/films')
     .then(res => {
       this.films = res.data.results;
     })
@@ -46,10 +45,10 @@ export default {
     .catch(error => {
       console.error(error);
     });
-    */
    
+   /*
     const api = axios.create({
-      baseURL:'https://swapi.co/api/',
+      baseURL:'https://swapi.dev/api/',
       transformResponse(data) {
         data = JSON.parse(data);
         return data.results;
@@ -61,7 +60,7 @@ export default {
 
     api.get('starships')
     .then(res => this.ships = res.data);
-
+    */arguments
   }
 }
 </script>
