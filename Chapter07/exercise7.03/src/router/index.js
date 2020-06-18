@@ -21,7 +21,7 @@ const routes = [
     meta: {
       transition: 'zoom',
     },
-    component: () => import(/* webpackChunkName: "about" */ '../views/Messages.vue')
+    component: () => import(/* webpackChunkName: "messages" */ '../views/Messages.vue')
   }
 ]
 
