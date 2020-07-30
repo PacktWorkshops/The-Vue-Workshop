@@ -14,7 +14,7 @@ export default new Vuex.Store({
   },
   actions: {
     loadBooks(context) {
-      fetch('https://api.jsonbin.io/b/5dd318e22e22356f234dea21')
+      fetch('/data/books.json')
       .then(res => res.json())
       .then(res => {
         context.commit('setBooks', res);
