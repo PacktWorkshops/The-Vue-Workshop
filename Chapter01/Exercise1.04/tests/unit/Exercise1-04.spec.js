@@ -3,8 +3,8 @@ import Exercise from '@/components/Exercise1-04.vue'
 
 describe('Exercise1-04.vue', () => {
   it('renders props.title when passed', () => {
-    const title = 'My list component!'
-    const subtitle = 'A subtitle'
+    const title = 'CSS module component!'
+    const subtitle = 'The fourth exercise'
     const wrapper = shallowMount(Exercise, {})
 
     wrapper.setData({ subtitle: subtitle, title: title })

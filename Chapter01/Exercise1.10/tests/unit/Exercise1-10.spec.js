@@ -1,28 +1,18 @@
-import { shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import Exercise from '@/components/Exercise1-10.vue'
+import sinon from 'sinon'
 
 describe('Exercise1-10.vue', () => {
-  const wrapper = shallowMount(Exercise, {})
-
-  it('data returns correctly in list element', () => {
-    const name = 'John Doe'
-    const language = 'Javascript'
-    wrapper.setData({
-      name: name,
-      language: language,
-    })
-
-    expect(
-      wrapper
-        .find('overview')
-        .find('li')[1]
-        .text()
-    ).toEqual(name)
-    expect(
-      wrapper
-        .find('overview')
-        .find('li')[2]
-        .text()
-    ).toEqual(language)
+  const wrapper = mount(Exercise)
+  
+  it('anonymous loop outputs correctly', () => {
+      expect(wrapper.findAll('li').length).toEqual(5)
+  })
+  it('trigger alert', () => {
+    const triggerAlertStub = sinon.stub()
+    wrapper.setMethods({ triggerAlert: triggerAlertStub })
+    wrapper.findAll('li').at(1).trigger('click')
+    expect(triggerAlertStub.called).toBe(false)
   })
 })
+

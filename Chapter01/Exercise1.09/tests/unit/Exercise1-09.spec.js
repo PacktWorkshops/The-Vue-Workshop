@@ -1,28 +1,32 @@
 import { shallowMount } from '@vue/test-utils'
 import Exercise from '@/components/Exercise1-09.vue'
 
-describe('Exercise6B.vue', () => {
-  const wrapper = shallowMount(Exercise, {})
-
-  it('data returns correctly in list element', () => {
-    const name = 'John Doe'
-    const language = 'Javascript'
-    wrapper.setData({
-      name: name,
-      language: language,
+describe('Exercise1-09.vue', () => {
+  
+  it('array outputs correctly', () => {
+    const array = [
+      {
+        title: 'TV',
+        favorite: ['Designated Survivor', 'Spongebob'],
+      },
+      {
+        title: 'Games',
+        favorite: ['CS:GO'],
+      },
+      {
+        title: 'Sports',
+        favorite: [],
+      },
+    ]
+    
+    const wrapper = shallowMount(Exercise, {
+      propsData: {
+        array
+      }
     })
 
-    expect(
-      wrapper
-        .find('overview')
-        .find('li')[1]
-        .text()
-    ).toEqual(name)
-    expect(
-      wrapper
-        .find('overview')
-        .find('li')[2]
-        .text()
-    ).toEqual(language)
+    expect(wrapper.html()).toContain(array[0].title)
+    expect(wrapper.html()).toContain(array[1].favorite[0])
+    expect(wrapper.html()).toContain(array[2].title)
   })
 })
