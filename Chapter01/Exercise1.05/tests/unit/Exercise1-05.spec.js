@@ -3,7 +3,7 @@ import Exercise from '@/components/Exercise1-05.vue'
 
 describe('Exercise1-05.vue', () => {
   it('renders props.title when passed', () => {
-    const title = 'Display title'
+    const title = 'PUG component!'
     const wrapper = shallowMount(Exercise, {})
 
     wrapper.setData({ title: title })

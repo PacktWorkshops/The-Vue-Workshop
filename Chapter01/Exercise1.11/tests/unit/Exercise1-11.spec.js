@@ -1,28 +1,25 @@
-import { shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import Exercise from '@/components/Exercise1-11.vue'
 
-describe('Exercise6B.vue', () => {
-  const wrapper = shallowMount(Exercise, {})
-
-  it('data returns correctly in list element', () => {
-    const name = 'John Doe'
-    const language = 'Javascript'
-    wrapper.setData({
-      name: name,
-      language: language,
+describe('Exercise1-11.vue', () => {
+  const wrapper = mount(Exercise)
+  
+  it('anonymous loop outputs correctly', () => {
+    expect(wrapper.findAll('li').length).toEqual(5)
+  })
+  it('format currency correctly', () => {
+    expect(wrapper.vm.formatCurrency(100)).toEqual('$100.00')
+  })
+  it('add to cart updates data', () => {
+    wrapper.setProps({
+      totalItems: 0,
+      totalCost: 0
     })
 
-    expect(
-      wrapper
-        .find('overview')
-        .find('li')[1]
-        .text()
-    ).toEqual(name)
-    expect(
-      wrapper
-        .find('overview')
-        .find('li')[2]
-        .text()
-    ).toEqual(language)
+    wrapper.vm.addToCart(5)
+
+    expect(wrapper.vm.totalItems).toEqual(1)
+    expect(wrapper.vm.totalCost).toEqual(5)
   })
 })
+
