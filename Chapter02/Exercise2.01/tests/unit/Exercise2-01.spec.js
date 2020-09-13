@@ -4,7 +4,7 @@ import Exercise from '@/components/Exercise2-01.vue'
 describe('Exercise2-01.vue', () => {
   const wrapper = shallowMount(Exercise, {})
 
-  it('renders input v-model when passed', () => {
+  it('comput fullname correctly', () => {
     const firstName = 'John'
     const lastName = 'Doe'
 
@@ -12,6 +12,6 @@ describe('Exercise2-01.vue', () => {
       firstName: firstName,
       lastName: lastName,
     })
-    expect(wrapper.text()).toEqual(`${firstName} ${lastName}`)
+    expect(wrapper.vm.fullName).toEqual(`${firstName} ${lastName}`)
   })
 })

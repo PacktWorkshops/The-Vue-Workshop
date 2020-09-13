@@ -17,20 +17,13 @@ describe('App.vue', () => {
 
     expect(vm.name).toBe(name)
   })
-  it('renders title', () => {
-    const title = 'Web Developer'
+  it('fetch authors', async () => {
     const { vm } = mount(App)
-
     expect(vm.authors).toStrictEqual([])
-    vm.authors = [
-      {
-        fields: {
-          title,
-        },
-      },
-    ]
 
-    expect(vm.title).toBe(title)
+    const people = await vm.getPeople()
+    vm.authors = people
+    expect(vm.title).toBe(people[0].fields.title)
   })
   it('renders bio', () => {
     const bio = 'From Melbourne'
@@ -48,22 +41,11 @@ describe('App.vue', () => {
     expect(vm.bio).toBe(bio)
   })
 
-  it('posts object exists', async () => {
+  it('fetch blog posts', async () => {
     const { vm } = mount(App)
 
-    const entries = {
-      items: [
-        {
-          fields: {
-            title: 'example',
-          },
-        },
-      ],
-    }
-
-    // Example Contentful object
-    vm.posts = entries.items
-
-    expect(vm.posts).toBe(entries.items)
+    const posts = await vm.getBlogPosts()
+    vm.posts = posts
+    expect(vm.posts).toBe(posts)
   })
 })
