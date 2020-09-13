@@ -9,7 +9,7 @@ export default {
   data() {
     return {
       title: 'My first component!',
-      isUppercase: false,
+      isUppercase: true,
     }
   },
 }
