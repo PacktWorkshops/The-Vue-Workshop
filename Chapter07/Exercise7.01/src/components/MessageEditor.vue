@@ -45,13 +45,13 @@ export default {
 }
 
 .slide-right {
-  animation: 2s slide-right 2s forwards;
+  animation: 1s slide-right 1s forwards;
   transform:translateX(-100%);
   transition: border-top 2s ease;
 }
 
 .slide-left {
-  animation: 2s slide-right 2s reverse;
+  animation: 1s slide-right 1s reverse;
   transform:translateX(-100%);
 }
 </style>
