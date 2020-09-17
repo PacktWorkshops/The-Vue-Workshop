@@ -4,7 +4,7 @@
     <button @click="sorting(true)">Sort Z-A</button>
     <button @click="shuffle()">Shuffle</button>
     <transition-group
-      :appear="true"
+      appear
       name="flip"
       tag="div"
     >
