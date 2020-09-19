@@ -34,7 +34,7 @@ export default {
       if (this.$refs.textArea.value !== '') {
         const ans = window.confirm('You have unsaved message. Are you sure to navigate away?');
 
-        next(!!ans);
+        next(ans);
       }
       else {
         next();
