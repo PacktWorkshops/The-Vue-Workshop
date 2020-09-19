@@ -44,8 +44,7 @@ export default {
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1s ease-in;
 }
-</style>
-<style>
+
 /**Zoom animation */
 .zoom-enter-active,
 .zoom-leave-active {
@@ -68,8 +67,7 @@ export default {
     opacity: 1;
   }
 }
-</style>
-<style>
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
