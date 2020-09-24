@@ -17,21 +17,21 @@ export default {
   data() {
     return {
       loading: false,
-      response: {},
+      axiosResponse: {},
     }
   },
   computed: {
     quote() {
-      return this.response && this.response.slip
-        ? this.response.slip.advice
+      return this.axiosResponse && this.axiosResponse.slip
+        ? this.axiosResponse.slip.advice
         : null
     },
   },
   methods: {
     async getApi() {
       this.loading = true
-      return axios.get('https://api.adviceslip.com/advice').then(({ data }) => {
-        this.response = data
+      return axios.get('https://api.adviceslip.com/advice').then(response => {
+        this.axiosResponse = response.data
         this.loading = false
       })
     },
