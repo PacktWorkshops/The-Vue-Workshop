@@ -23,7 +23,7 @@ import { mapState } from 'vuex';
 
 export default {
   name: 'Cart',
-  computed: mapState(['cart']),
+  computed: mapState(['cart'])
 }
 </script>
 

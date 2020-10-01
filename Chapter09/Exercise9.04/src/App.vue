@@ -6,7 +6,8 @@
       I have {{ $store.state.totalCats }} cats.
     </p>
     <p>
-      <input v-model="newName"> <button @click="setName" :disabled="!newName">Update Name</button>
+      <input v-model="newName"> 
+      <button @click="setName" :disabled="!newName">Update Name</button>
     </p>
     <Cat/>
   </div>

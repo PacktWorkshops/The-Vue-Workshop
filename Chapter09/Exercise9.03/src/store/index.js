@@ -14,14 +14,14 @@ export default new Vuex.Store({
   },
   getters: {
     fiction(state) {
-      return state.books.filter(b => b.type === 'fiction');
+      return state.books.filter(book => book.type === 'fiction');
     },
     nonfiction(state) {
-      return state.books.filter(b => b.type === 'nonfiction');
+      return state.books.filter(book => book.type === 'nonfiction');
     },
     booksByMaxPages(state) {
       return function(pages) {
-        return state.books.filter(b => b.pages <= pages);
+        return state.books.filter(book => book.pages <= pages);
       }
     }
   }

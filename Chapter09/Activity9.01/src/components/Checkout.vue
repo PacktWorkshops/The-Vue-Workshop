@@ -2,7 +2,7 @@
   <div>
     <h2>Checkout</h2>
 	Your total is ${{ cartTotal }}.
-	<button v-if="cartTotal > 0" @click="checkout">Checkout</button>
+	<button v-show="cartTotal > 0" @click="checkout">Checkout</button>
   </div>
 </template>
 
