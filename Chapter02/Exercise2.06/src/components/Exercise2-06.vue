@@ -32,7 +32,9 @@ export default {
       this.loading = true
       return axios.get('https://api.adviceslip.com/advice').then(response => {
         this.axiosResponse = response.data
-        this.loading = false
+        setTimeout(() => {
+          this.loading = false
+        }, 4000);
       })
     },
   },
@@ -44,6 +46,7 @@ export default {
   margin: 0 auto;
   padding: 30px;
   max-width: 600px;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }
 blockquote {
   position: relative;

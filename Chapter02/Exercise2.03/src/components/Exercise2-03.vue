@@ -39,10 +39,8 @@ export default {
   margin: 0 auto;
   padding: 30px;
   max-width: 600px;
-}
-input {
-  padding: 10px 6px;
-  margin: 20px 10px 10px 0;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  margin: 0;
 }
 a {
   display: inline-block;

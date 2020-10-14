@@ -93,6 +93,7 @@ export default {
   margin: 0 auto;
   padding: 30px;
   max-width: 600px;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }
 .col {
   width: 33%;
