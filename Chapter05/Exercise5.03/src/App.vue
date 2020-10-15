@@ -36,13 +36,13 @@ export default {
           id: '10',
           title: 'Forest Shot',
           description: 'Recent shot of a forest overlooking a lake',
-          url: 'https://i.picsum.photos/id/10/1000/750.jpg',
+          url: 'https://picsum.photos/id/10/1000/750.jpg',
         },
         {
           id: '1000',
           title: 'Cold cross',
           description: 'Mountaintop cross with snowfall from Jan 2018',
-          url: 'https://i.picsum.photos/id/1000/1000/750.jpg',
+          url: 'https://picsum.photos/id/1000/1000/750.jpg',
         },
       ]
     }
