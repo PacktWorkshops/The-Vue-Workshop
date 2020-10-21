@@ -20,7 +20,7 @@ export const routes = [
   }, {
     path: '/messagesFeed',
     name: 'messageFeed',
-    component: () => import(/* webpackChunkName: "about" */ '../views/MessageFeed.vue')
+    component: () => import(/* webpackChunkName: "messageFeed" */ '../views/MessageFeed.vue')
   }
 ]
 

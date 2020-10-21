@@ -22,7 +22,7 @@ export const routes = [
     }, {
       path: 'editor',
       name: 'editor',
-      component: () => import(/* webpackChunkName: "list" */ '../views/MessageEditor.vue'),
+      component: () => import(/* webpackChunkName: "editor" */ '../views/MessageEditor.vue'),
       props: true,
     }]
   },
