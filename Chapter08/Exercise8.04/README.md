@@ -1,4 +1,4 @@
-# Exercise8.04: Adding an 'organisation' field with Vuex
+# Exercise8.04: Adding an 'organization' field with Vuex
 
 
 ## Project setup

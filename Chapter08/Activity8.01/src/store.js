@@ -8,7 +8,7 @@ export default new Vuex.Store({
     formData: {
       name: '',
       occupation: '',
-      organisation: '',
+      organization: '',
       email: '',
       phone: '',
     }
@@ -18,7 +18,7 @@ export default new Vuex.Store({
       state.formData = {
         name: payload.name || '',
         occupation: payload.occupation || '',
-        organisation: payload.organisation || '',
+        organization: payload.organization || '',
         email: payload.email || '',
         phone: payload.phone || '',
       }
@@ -27,7 +27,7 @@ export default new Vuex.Store({
       state.formData = {
         name: '',
         occupation: '',
-        organisation: '',
+        organization: '',
         email: '',
         phone: '',
       }
