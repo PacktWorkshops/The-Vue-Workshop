@@ -8,7 +8,7 @@ export default new Vuex.Store({
     formData: {
       name: '',
       occupation: '',
-      organisation: ''
+      organization: ''
     }
   },
   mutations: {
@@ -16,14 +16,14 @@ export default new Vuex.Store({
       state.formData = {
         name: payload.name || '',
         occupation: payload.occupation || '',
-        organisation: payload.organisation || '',
+        organization: payload.organization || '',
       }
     },
     profileClear(state) {
       state.formData = {
         name: '',
         occupation: '',
-        organisation: ''
+        organization: ''
       }
     }
   }

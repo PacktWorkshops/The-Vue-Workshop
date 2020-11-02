@@ -1,6 +1,6 @@
 {
   "name": "Exercise8.04",
-  "description": "Adding an 'organisation' field with Vuex",
+  "description": "Adding an 'organization' field with Vuex",
   "version": "0.1.0",
   "private": true,
   "scripts": {

@@ -4,8 +4,8 @@
     <h3 class="font-bold font-lg">{{ formData.name }}</h3>
     <p class="mt-2">
       {{ formData.occupation }}
-      <span v-if="formData.organisation">
-        at {{ formData.organisation }}
+      <span v-if="formData.organization">
+        at {{ formData.organization }}
       </span>
     </p>
     <p class="mt-2" v-if="formData.email">

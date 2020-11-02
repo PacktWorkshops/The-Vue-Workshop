@@ -22,12 +22,12 @@
       />
     </div>
     <div class="flex flex-col mt-2">
-      <label class="flex text-gray-800 mb-2" for="organisation">Organisation</label>
+      <label class="flex text-gray-800 mb-2" for="organization">Organization</label>
       <input
         id="occupation"
         type="text"
-        name="organisation"
-        v-model="organisation"
+        name="organization"
+        v-model="organization"
         class="border-2 border-solid border-blue-200 rounded px-2 py-1"
       />
     </div>
@@ -54,7 +54,7 @@ export default {
     return {
       name: '',
       occupation: '',
-      organisation: ''
+      organization: ''
     }
   },
   methods: {
@@ -62,13 +62,13 @@ export default {
       this.$store.commit('profileUpdate', {
         name: this.name,
         occupation: this.occupation,
-        organisation: this.organisation
+        organization: this.organization
       })
     },
     resetProfileForm() {
       this.name = '';
       this.occupation = '';
-      this.organisation = ''
+      this.organization = ''
     }
   }
 }
